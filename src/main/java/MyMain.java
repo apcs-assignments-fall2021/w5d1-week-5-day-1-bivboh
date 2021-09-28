@@ -6,7 +6,19 @@ public class MyMain {
     // to sort our code
     // This algorithm returns the sorted array
     public static int[] selectionSort(int[] arr) {
-        // REPLACE THIS WITH YOUR CODE
+
+        for (int i = 0; i < arr.length; i++){
+            int index = 0;
+            int maximum = Integer.MAX_VALUE;
+            for (int j = i; j < arr.length; j++){
+                if (arr[j] < maximum){
+                    maximum = arr[j];
+                    index = j;
+                }
+
+            }
+            arr[i] = arr[index];
+        }
         return arr;
     }
 
